@@ -45,4 +45,11 @@ class RolesController extends Controller
 
         return back();
     }
+
+    public function edit($id){
+        $role = Role::findById($id);
+        $permissions  = Permission::all();
+        $permissionsGroup = User::getPermissionGroup();
+        return view('admin.roles.edit', compact('permissions', 'permissionsGroup', 'role'));
+    }
 }

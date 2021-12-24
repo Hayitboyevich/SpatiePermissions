@@ -20,7 +20,9 @@
                                 <tr>
                                     <td>{{$role->id}}</td>
                                     <td>{{$role->name}}</td>
-                                    <td>---</td>
+                                    <td>
+                                        <a href="{{route('admin.roles.edit', ['id'=>$role->id])}}"><i class="fa fa-edit"></i></a>
+                                    </td>
                                 </tr>
                                 @endforeach
                                 </tbody>

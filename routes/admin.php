@@ -10,6 +10,7 @@ Route::group([
     Route::get('/', [HomeController::class, 'index'])->name('admin');
     Route::get('/roles', [RolesController::class, 'index'])->name('roles');
     Route::get('/roles/create', [RolesController::class, 'create'])->name('roles.create');
+    Route::get('/roles/edit/{id}', [RolesController::class, 'edit'])->name('roles.edit');
     Route::post('/roles/store', [RolesController::class, 'store'])->name('roles.store');
     Route::get('/permissions', [HomeController::class, 'permissions'])->name('permissions');
 });
